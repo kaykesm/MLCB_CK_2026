@@ -1,0 +1,11 @@
+
+O algoritmo conseguiu identificar corretamente a intenção troca_devolucao para a mensagem de teste.
+A frase utilizada no teste possui palavras semelhantes às mensagens de treinamento, como “devolver” e “produto”.
+O TF-IDF transforma as mensagens em valores numéricos, dando maior importância às palavras relevantes.
+O Naive Bayes utiliza probabilidades para decidir a qual intenção a mensagem pertence.
+A maior probabilidade deve estar relacionada à classe troca_devolucao, indicando que o modelo reconheceu corretamente a intenção.
+As probabilidades apresentadas ajudam a entender o quanto o modelo está confiante em cada classificação.
+Como o dataset possui poucos exemplos, o algoritmo pode apresentar dificuldades com mensagens muito diferentes das utilizadas no treinamento.
+Para melhorar o resultado, seria importante aumentar a quantidade de exemplos de cada intenção e utilizar mensagens mais variadas.
+
+
