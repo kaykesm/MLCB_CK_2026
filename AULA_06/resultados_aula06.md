@@ -101,6 +101,32 @@ No LAB02, o limiar de confiança foi alterado de 50% para 65%. A mensagem visual
 - **Confiança:** 100.0%
 - **Status da Decisão:** IDENTIFICADO (2via_boleto_contrato) - Confiança mínima: 65%
 
+## LAB03 - Nova Intenção: cancelar_contrato
+
+No LAB03, foi adicionada uma quinta intenção chamada `cancelar_contrato`. Foram incluídas 5 novas frases de treinamento no dataset e uma nova resposta padrão de negócio para solicitações de cancelamento.
+
+Após a alteração, o dataset passou a possuir 25 mensagens divididas em 5 intenções.
+
+### Teste 1
+
+**Frase:** "Quero cancelar meu contrato de aluguel."
+
+- **Intenção:** cancelar_contrato
+- **Confiança:** 100.0%
+- **Status da Decisão:** IDENTIFICADO (cancelar_contrato) - Confiança mínima: 65%
+
+### Teste 2
+
+**Frase:** "Não quero mais continuar com o contrato, gostaria de encerrá-lo."
+
+- **Intenção:** cancelar_contrato
+- **Confiança:** 100.0%
+- **Status da Decisão:** IDENTIFICADO (cancelar_contrato) - Confiança mínima: 65%
+
+### Resultado
+
+A nova intenção `cancelar_contrato` foi adicionada e treinada com sucesso. O modelo identificou corretamente a nova classe nos testes realizados, inclusive em uma frase diferente das utilizadas diretamente no treinamento. A interface Gradio continuou funcionando normalmente após a inclusão da quinta intenção.
+
 ### Resultado
 
 O novo limiar de confiança de 65% foi aplicado com sucesso. Nos testes, classificações com confiança igual ou superior ao limiar foram aceitas, enquanto a classificação com 40.0% de confiança acionou o fallback. A interface também passou a exibir explicitamente o corte de 65% no status da decisão.
